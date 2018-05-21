@@ -3,4 +3,7 @@ def printResults(dishes):
     for dish in dishes.keys():
         print(dish)
     print("sklad:")
-        print(dishes[dish])
+        for key in dishes[dish]:
+            print(key, dishes[dish][key], end ='')
+
+
