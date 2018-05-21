@@ -1,4 +1,4 @@
 sandwiches
-bread:1,butter:1,cheese
+bread:1,butter:1,cheese:3
 english breaakfast
-becon:1, eggs:2,pork sausages:1,black pudding:2
+becon:1,eggs:2,pork_sausages:1,black_pudding:2
