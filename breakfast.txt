@@ -5,7 +5,7 @@ bread:1,peanut butter:1
 omlette
 eggs:4,butter:1
 french toasts
-bread:1,eggs:2, milk:1
+bread:1,eggs:2,milk:1,butter:1
 english breakfast
-becon:1,eggs:2,pork sausages:1,black pudding:2
+bacon:1,eggs:2,pork sausages:1,black pudding:2
 
