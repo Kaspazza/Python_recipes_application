@@ -1,4 +1,4 @@
-def printResults(dishes):
+def print_results(dishes):
     print("Znaleziono nastepujace potrawy:")
     i = 1
     for dish in dishes.keys():
