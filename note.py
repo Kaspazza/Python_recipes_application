@@ -13,5 +13,3 @@ def print_note(dish_name):
         lines = file.readlines()
     print(lines)
 
-
-print_note("tomato soup")
