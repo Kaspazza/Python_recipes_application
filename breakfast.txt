@@ -1,4 +1,11 @@
-sandwiches
+sandwich with cheese
 bread:1,butter:1,cheese:3
-english breaakfast
-becon:1,eggs:2,pork_sausages:1,black_pudding:2
+sandwich with peanut butter
+bread:1,peanut butter:1
+omlette
+eggs:4,butter:1
+french toasts
+bread:1,eggs:2, milk:1
+english breakfast
+becon:1,eggs:2,pork sausages:1,black pudding:2
+
