@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1897a20f9bf66b6f20700fdf6e390269be69bab2
 def print_results(dishes):
     print("Znaleziono nastepujace potrawy:")
     i = 1

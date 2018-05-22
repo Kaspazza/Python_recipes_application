@@ -1,6 +1,7 @@
 import imports
 import algorithms
 import printing
+import note
 
 
 # picking data for right algorithm
@@ -52,7 +53,6 @@ def meal_type_decision():
         if choose == "b":
             final_dishes = search_type("breakfast.txt")
             return final_dishes
-
         elif choose == "s":
             final_dishes = search_type("supper.txt")
             return final_dishes
@@ -63,23 +63,47 @@ def meal_type_decision():
             print("something went wrong, be sure you typed 'b', 's' or 'd'")
 
 
+def choose_dish(final_dishes):
+    dish_name = "niemamnie"
+    while dish_name not in final_dishes:
+        dish_name = input("choose which dish you want to see!\n")
+    return dish_name
+
+
+def deciding_to_add_note(choosen_dish):
+    decision = "0"
+    while decision != "y" or decision != "n"
+        decision =  input("Do you want to add a note to your dish?(y/n)\n")
+    if decision == "y"
+        note_text = input("What you want to say than?")
+        note.add_note(choosen_dish, note_text)
+    return
+
 # choosing what to show on main menu
-def main_menu_decision():
+def main_menu_decision(file):
     decision = "0"
     while decision != "3":
         decision = input("what you want to do?\n")
         if decision == "1":
             final_dishes = meal_type_decision()
-            printing.printResults(final_dishes)
+            printing.print_results(final_dishes)
+            choosen_dish = choose_dish(final_dishes)
+            printing.print_recipe(choosen_dish)
+            deciding_to_add_note(choosen_dish)
+            return
         elif decision == "2":
-            printing.graphics_display("graphics/authors.txt")
+            printing.graphics_display(file)
 
 
 # main function
 def main():
-    printing.graphics_display("graphics/welcome.txt")
-    main_menu_decision()
-    printing.graphics_display("graphics/end.txt")
+    welcome_screen = "graphics/welcome.txt"
+    end_screen     = "graphics/end.txt"
+    authors        = "graphics/authors.txt"
+
+    printing.graphics_display(welcome_screen)
+    main_menu_decision(authors)
+    printing.graphics_display(end_screen)
 
 
 if __name__ == "__main__":
