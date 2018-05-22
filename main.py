@@ -3,7 +3,8 @@ import algorithms.py
 import printing.py
 
 
-def pick_components():
+# picking data for right algorithm
+def pick_components(type):
     number_of_ingredients = input("How many ingredients you want to use?")
     if type == "1":
         components = {}
@@ -21,35 +22,35 @@ def pick_components():
     return components
 
 
+# getting dishes by choosen algorithm
 def search_type(file_type):
 
     choose = input("You want to search for receipts you can make with your \
     ingredients or receipts containing ingredient?(1 or 2)")
 
-    if choose == "1":
-        dishes = import_recipes.import_recipes(file_type)
-        components = pick_components()
-        algorithms.get_dishes(components, dishes)
-
-    elif choose =="2":
-        dishes = import_recipes.import_recipes(file_type)
-        components = pick_components()
+    dishes = import_recipes.import_recipes(file_type)
+    components = pick_components(choose)
+    algorithms.get_dishes(components, dishes, choose)
 
 
+#choosing meal type
 def meal_type_decision():
-    choose = input("You want receipts for breakfast, supper or dinner? (b,s,d)")
+    choose = "0"
+    while choose != "b" or choose != "s" or choose != "d":
+        choose = input("You want receipts for breakfast, supper or dinner? (b,s,d)")
+        if choose == "b":
+            search_type("breakfast")
 
-    if choose == "b":
-        search_type("breakfast")
+        elif choose == "s":
+            search_type("supper")
 
-    elif choose == "s":
-        search_type("supper")
+        elif choose == "d":
+            search_type("dinner")
+        else:
+            print("something went wrong, be sure you typed 'b', 's' or 'd'")
 
-    elif choose == "d":
-        search_type("dinner")
 
-
-#user inputs what he wants to see
+#choosing what to show on main menu
 def main_menu_decision():
     decision = "0"
     while decision != "3":
@@ -60,6 +61,7 @@ def main_menu_decision():
             printing.graphics_display("authors")
 
 
+#main function
 def main():
     printing.graphics_display("welcome.txt")
     main_menu_decision()
