@@ -5,18 +5,18 @@ import printing
 
 # picking data for right algorithm
 def pick_components(type):
-    number_of_ingredients = input("How many ingredients you want to use?")
+    number_of_ingredients = input("How many ingredients you want to use?\n")
     if type == "1":
         components = {}
         for ingredients in range(int(number_of_ingredients)):
-            ingredient = input("Pick ingredient")
-            quantity   = input("Pick quantity")
+            ingredient = input("Pick ingredient\n")
+            quantity   = input("Pick quantity\n")
             components[ingredient] = quantity
 
     elif type == "2":
         components = []
         for ingredients in range((number_of_ingredients)):
-            ingredient = input("Pick ingredient")
+            ingredient = input("Pick ingredient\n")
             components.append(ingredient)
 
     return components
@@ -29,7 +29,7 @@ def search_type(file_type):
 
     dishes = imports.import_recipes(file_type)
     while choose != "1" or choose != "2":
-        choose = input("You want to search for receipts you can make with your ingredients or receipts containing ingredient?(1 or 2)")
+        choose = input("Do You want to search for: \n 1.Receipts you can make with your ingredients \n 2.Receipts containing ingredient?(1 or 2)\n")
         if choose == "1":
             components = pick_components(choose)
             final_dishes = algorithms.get_dishes_by_all_components(components, dishes)
@@ -40,8 +40,7 @@ def search_type(file_type):
             break
         else:
             print("are you sure you picked 1 or 2? Try again!")
-    printing.printResults(final_dishes)
-    print()
+    return final_dishes
 
 # choosing meal type
 def meal_type_decision():
@@ -49,15 +48,17 @@ def meal_type_decision():
     choose = "0"
 
     while choose != "b" or choose != "s" or choose != "d":
-        choose = input("You want receipts for breakfast, supper or dinner? (b,s,d)")
+        choose = input("You want receipts for: breakfast, supper or dinner? (b,s,d)\n")
         if choose == "b":
-            search_type("breakfast.txt")
+            final_dishes = search_type("breakfast.txt")
+            return final_dishes
 
         elif choose == "s":
-            search_type("supper.txt")
-
+            final_dishes = search_type("supper.txt")
+            return final_dishes
         elif choose == "d":
-            search_type("dinner.txt")
+            final_dishes = search_type("dinner.txt")
+            return final_dishes
         else:
             print("something went wrong, be sure you typed 'b', 's' or 'd'")
 
@@ -66,9 +67,10 @@ def meal_type_decision():
 def main_menu_decision():
     decision = "0"
     while decision != "3":
-        decision = input("what you want to do?")
+        decision = input("what you want to do?\n")
         if decision == "1":
-            meal_type_decision()
+            final_dishes = meal_type_decision()
+            printing.printResults(final_dishes)
         elif decision == "2":
             printing.graphics_display("graphics/authors.txt")
 

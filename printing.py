@@ -1,10 +1,9 @@
 def printResults(dishes):
     print("Znaleziono nastepujace potrawy:")
+    i = 1
     for dish in dishes.keys():
-        print(dish)
-    print("sklad:")
-    for key in dishes[dish]:
-        print(key, dishes[dish][key], end ='')
+        print(i, dish)
+        i += 1
 
 
 # imports and prints files like welcome.txt end.txt
