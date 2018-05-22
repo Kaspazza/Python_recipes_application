@@ -1,4 +1,3 @@
-
 def import_txt(recipes_txt):
     with open(recipes_txt, "r+") as file:
         lines = file.readlines()
@@ -16,7 +15,3 @@ def import_txt(recipes_txt):
         i = i+1
 
     return dishes
-
-
-# print(import_txt("breakfast.txt"))
-# print(import_txt("dinner.txt"))

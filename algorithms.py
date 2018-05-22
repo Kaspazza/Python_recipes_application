@@ -1,11 +1,11 @@
-def getDishes(components, dishes):
+def get_dishes(components, dishes):
     # components - dict
     # dishes -dict{name:dict}
 
     result = {}
 
     for dish in dishes.keys():
-        
+
         add = True
 
         for component in dishes[dish].keys():
@@ -14,18 +14,18 @@ def getDishes(components, dishes):
             else:
                 if dishes[dish][component] > components[component]:
                     add = False
-        
+
         if add:
             result[dish] = dishes[dish]
 
     return result
 
 
-
 components = {"jajka":3, "chleb":2}
 dishes = {
     "jajecnica":{"jajka": 2},
-    "kotlet": {"mieso": 3}
+    "kotlet": {"mieso": 3},
+    "ziemniaki": {"jajka":3, "chleb":2}
 }
 
 
