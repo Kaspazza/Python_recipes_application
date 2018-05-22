@@ -33,7 +33,7 @@ def search_type(file_type):
     algorithms.get_dishes(components, dishes, choose)
 
 
-#choosing meal type
+# choosing meal type
 def meal_type_decision():
     choose = "0"
     while choose != "b" or choose != "s" or choose != "d":
@@ -50,7 +50,7 @@ def meal_type_decision():
             print("something went wrong, be sure you typed 'b', 's' or 'd'")
 
 
-#choosing what to show on main menu
+# choosing what to show on main menu
 def main_menu_decision():
     decision = "0"
     while decision != "3":
@@ -61,7 +61,7 @@ def main_menu_decision():
             printing.graphics_display("authors")
 
 
-#main function
+# main function
 def main():
     printing.graphics_display("welcome.txt")
     main_menu_decision()
