@@ -15,10 +15,3 @@ def import_recipes(recipes_txt):
         i = i+1
 
     return dishes
-<<<<<<< HEAD
-
-
-print(import_txt("breakfast.txt"))
-print(import_txt("dinner.txt"))
-=======
->>>>>>> b521bffd6d3d0b56c39d952aafd5ab57be811e8c
