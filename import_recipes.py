@@ -18,5 +18,5 @@ def import_txt(recipes_txt):
     return dishes
 
 
-# print(import_txt("breakfast.txt"))
-# print(import_txt("dinner.txt"))
+print(import_txt("breakfast.txt"))
+print(import_txt("dinner.txt"))
