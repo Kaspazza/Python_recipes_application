@@ -93,10 +93,11 @@ def main_menu_decision(authors):
             printing.print_recipe(choosen_dish)
             deciding_to_add_note(choosen_dish)
             return
-        elif decision == "3":
-            printing.graphics_display(authors)
         elif decision == "2":
             pass
+        elif decision == "3":
+            printing.graphics_display(authors)
+
 
 # main function
 def main():
