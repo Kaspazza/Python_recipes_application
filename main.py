@@ -64,10 +64,11 @@ def meal_type_decision():
             print("something went wrong, be sure you typed 'b', 's' or 'd'")
 
 
-def choose_dish(final_dishes):
+def choose_dish(final_dishes, all_dishes):
     dish_name = "niemamnie"
     while dish_name not in final_dishes:
-        dish_name = input("choose which dish you want to see!\n")
+        dish_number = input("choose number of dish you want to see!\n")
+        dish_name = all_dishes[int(dish_number)-1]
     return dish_name
 
 
@@ -80,6 +81,12 @@ def deciding_to_add_note(choosen_dish):
             note.add_note(choosen_dish, note_text)
         else:
             return
+def numeric_choose_dishes(dishes):
+    all_dishes = []
+    for dish in dishes.keys():
+        all_dishes.append(dish)
+    return all_dishes
+
 
 # choosing what to show on main menu
 def main_menu_decision(authors):
@@ -89,7 +96,8 @@ def main_menu_decision(authors):
         if decision == "1":
             final_dishes = meal_type_decision()
             printing.print_results(final_dishes)
-            choosen_dish = choose_dish(final_dishes)
+            all_dishes = numeric_choose_dishes(final_dishes)
+            choosen_dish = choose_dish(final_dishes, all_dishes)
             printing.print_recipe(choosen_dish)
             deciding_to_add_note(choosen_dish)
             return
