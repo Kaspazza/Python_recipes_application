@@ -1,5 +1,5 @@
 Sandwich with cheese
-bread:1,butter:1,cheese
+bread:1,butter:1,cheese:2
 Pizza
 flour:1,yeast:1,tomato:1,cheese:1,herbs:1
 Scrumbled eggs

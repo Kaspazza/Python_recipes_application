@@ -1,14 +1,12 @@
 Tomato soup
-potatoes:2,tomato puree:1
-Sour soup
-garlic:1,vegetable broth:2
-Meatloaf
-beef meat:05,onion:1,eggs:2
+tomato puree:1,sour cream:1, stock cube:1
+Minced chop
+minced meat:1,onion:1,eggs:1
 Vegetable salad
 carrot:2,apple:3
 Spaghetti bolognese
 pasta:1,tomato:2,garlic:1,minced meat:1
 Dumplings
-flour:1,potatoes:2:white cheese:1,onion:1
+flour:1,potatoes:2:white cheese:1
 
 
