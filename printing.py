@@ -15,7 +15,7 @@ def graphics_display(graphic_file):
 
 
 def print_recipe(dishe):
-    dish_name = "ishes_details/" + dish_name + ".txt"
+    dish_name = "dishes_details/" dish_name + ".txt"
     with open(dish_name, "r") as file:
         lines = file.readlines()
         print(lines)
