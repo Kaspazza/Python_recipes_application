@@ -1,3 +1,6 @@
+import imports
+
+
 def print_results(dishes):
     print("Znaleziono nastepujace potrawy:")
     i = 1
@@ -28,23 +31,15 @@ def print_recipe(dish_name):
 
 
 def print_all_short_recipes():
-    with open( "breakfast.txt", "r") as file:
-        lines = file.readlines()
-        dishes = [item.strip("\n") for item in lines]   
-        for  line in dishes:
-            print ("   ",line)
-    print()
-    with open( "dinner.txt", "r") as file:
-        lines = file.readlines()
-        dishes = [item.strip("\n") for item in lines]   
-        for  line in dishes:
-            print ("   ",line)
-    print()
-    with open( "supper.txt", "r") as file:
-        lines = file.readlines()
-        dishes = [item.strip("\n") for item in lines]   
-        for  line in dishes:
-            print ("   ",line)
+    print("\nBREAKFEST")
+    breakfest_recipies = imports.import_recipes("breakfast.txt")
+    print_results(breakfest_recipies)
+    print("\nDINNER")
+    dinner_recipies = imports.import_recipes("dinner.txt")
+    print_results(dinner_recipies)
+    print("\nSUPPER")
+    supper_recipies = imports.import_recipes("supper.txt")
+    print_results(supper_recipies)
     print()
     
 

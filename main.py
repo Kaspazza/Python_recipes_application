@@ -94,7 +94,7 @@ def main_menu_decision(authors):
             deciding_to_add_note(choosen_dish)
             return
         elif decision == "2":
-            pass
+            printing.print_all_short_recipes()
         elif decision == "3":
             printing.graphics_display(authors)
 
