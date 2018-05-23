@@ -26,4 +26,29 @@ def print_recipe(dish_name):
             print ("   ",line)
     print()
 
+
+def print_all_short_recipes():
+    with open( "breakfast.txt", "r") as file:
+        lines = file.readlines()
+        dishes = [item.strip("\n") for item in lines]   
+        for  line in dishes:
+            print ("   ",line)
+    print()
+    with open( "dinner.txt", "r") as file:
+        lines = file.readlines()
+        dishes = [item.strip("\n") for item in lines]   
+        for  line in dishes:
+            print ("   ",line)
+    print()
+    with open( "supper.txt", "r") as file:
+        lines = file.readlines()
+        dishes = [item.strip("\n") for item in lines]   
+        for  line in dishes:
+            print ("   ",line)
+    print()
+    
+
+
+
+
   
