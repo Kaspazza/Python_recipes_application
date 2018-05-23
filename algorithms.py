@@ -37,9 +37,3 @@ def get_dishes_by_one_component(components, dishes):
             result[dish] = dishes[dish]
 
     return result
-# 
-# components = ["jajka", "mieso"]
-# components2 = {"jajka": 3, "chleb": 2}
-# dishes = {"jajecznica": {"jajka": 2, "chleb": 1}, "kotlet": {"mieso": 3, "smalec": 1}}
-#
-# print(get_dishes_by_all_components(components2, dishes))

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 1897a20f9bf66b6f20700fdf6e390269be69bab2
 def print_results(dishes):
     print("Znaleziono nastepujace potrawy:")
     i = 1
@@ -14,17 +10,12 @@ def print_results(dishes):
 def graphics_display(graphic_file):
     with open(graphic_file, "r+") as file:
         lines = file.readlines()
+        lines = ''.join(lines)
     print(lines)
 
 
 def print_recipe(dishe):
-    dish_name = "ishes_details/" dish_name + ".txt"
+    dish_name = "ishes_details/" + dish_name + ".txt"
     with open(dish_name, "r") as file:
         lines = file.readlines()
         print(lines)
-
-
-
-
-
-
