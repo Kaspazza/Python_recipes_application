@@ -17,7 +17,7 @@ def pick_components(type):
 
     elif type == "2":
         components = []
-        for ingredients in range((number_of_ingredients)):
+        for ingredients in range(int(number_of_ingredients)):
             ingredient = input("Pick ingredient\n")
             components.append(ingredient)
 
