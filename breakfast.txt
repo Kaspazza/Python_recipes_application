@@ -8,4 +8,3 @@ french toasts
 bread:1,eggs:2,milk:1,butter:1
 english breakfast
 bacon:1,eggs:2,pork sausages:1,black pudding:2
-
