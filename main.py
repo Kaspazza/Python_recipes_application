@@ -75,10 +75,11 @@ def deciding_to_add_note(choosen_dish):
     decision = "0"
     while decision != "y" or decision != "n":
         decision =  input("Do you want to add a note to your dish?(y/n)\n")
-    if decision == "y":
-        note_text = input("What you want to say than?")
-        note.add_note(choosen_dish, note_text)
-    return
+        if decision == "y":
+            note_text = input("What you want to say than?\n")
+            note.add_note(choosen_dish, note_text)
+        else:
+            return
 
 # choosing what to show on main menu
 def main_menu_decision(authors):
