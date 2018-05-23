@@ -15,7 +15,15 @@ def graphics_display(graphic_file):
 
 
 def print_recipe(dish_name):
+    print()
+    print("***",dish_name.upper(),"***")
+    print()
     dish_name = "dishes_details/" + dish_name + ".txt"
     with open(dish_name, "r") as file:
         lines = file.readlines()
-        print(lines)
+        list_recipe = [item.strip("\n") for item in lines]   
+        for  line in list_recipe:
+            print ("   ",line)
+    print()
+
+  
