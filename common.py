@@ -31,7 +31,7 @@ def deciding_to_add_note(choosen_dish):
         elif decision == "n":
             return
         else:
-            print("You can type only 'y' or 'n'")
+            print("\nYou can type only 'y' or 'n'\n")
 
 
 # show recipes for breakfast, dinner and supper
