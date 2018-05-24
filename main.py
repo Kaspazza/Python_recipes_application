@@ -1,4 +1,3 @@
-
 import printing
 import note
 from os import system
@@ -19,8 +18,11 @@ def main_menu_decision(authors):
             return
         elif decision == "2":
             printing.print_all_short_recipes()
-            # choosen_dish = common.choose_dish(final_dishes, all_dishes)
-            # printing.print_recipe(choosen_dish)
+            printing.print_results(food_recipies)
+            all_dishes = common.numeric_choose_dishes( food_recipies )
+            dish_name = common.choose_dish(all_dishes, all_dishes)
+            printing.print_recipe(dish_name)
+
         elif decision == "3":
             printing.graphics_display(authors)
 
