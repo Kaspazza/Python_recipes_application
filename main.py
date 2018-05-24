@@ -7,15 +7,18 @@ import os.path
 
 # choosing what to show on main menu
 def main_menu_decision(authors):
+
+    main_menu = "graphics/menu.txt"
     dishes_details_directory = "dishes_details/"
     decision = "0"
+
     while decision != "4":
         decision = input("What you want to do?\n")
         if decision == "1":
             final_dishes = common.meal_type_decision("find")
             if len(final_dishes) < 1:
                 print("\nA t t e n t i o n  ! ! !\nThere is no such product !!!\n")
-            else:    
+            else:
                 printing.print_results(final_dishes)
                 all_dishes = common.numeric_choose_dishes(final_dishes)
                 choosen_dish = common.choose_dish(final_dishes, all_dishes)
@@ -32,17 +35,19 @@ def main_menu_decision(authors):
             if os.path.isfile("dishes_notes/"+ dish_name + ".txt") == True:
                 print("    N O T E S \n")
                 printing.print_recipe(dish_name, "dishes_notes/")
-            
+
         elif decision == "3":
             printing.graphics_display(authors)
+            input("Hit any key to exit")
+
 
 
 # main function
 def main():
     welcome_screen = "graphics/welcome.txt"
-    main_menu      = "graphics/menu.txt"
-    end_screen     = "graphics/end.txt"
-    authors        = "graphics/authors.txt"
+    end_screen = "graphics/end.txt"
+    main_menu = "graphics/menu.txt"
+    authors = "graphics/authors.txt"
 
     printing.graphics_display(welcome_screen)
     input("Click anything to start")

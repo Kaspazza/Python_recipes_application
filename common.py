@@ -3,11 +3,24 @@ import algorithms
 import note
 
 
+# Read input from user
+def getch():
+    import sys, tty, termios
+    fd = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(fd)
+    try:
+        tty.setraw(sys.stdin.fileno())
+        ch = sys.stdin.read(1)
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+    return ch
+
+
 # choosing number of dish
 def choose_dish(final_dishes, all_dishes):
     dish_name = "niemamnie"
     while dish_name not in final_dishes:
-        dish_number = input("choose number of dish you want to see!\n")
+        dish_number = input("Choose number of dish you want to see!\n")
         dish_name = all_dishes[int(dish_number)-1]
     return dish_name
 
@@ -24,9 +37,9 @@ def numeric_choose_dishes(dishes):
 def deciding_to_add_note(choosen_dish):
     decision = "0"
     while decision != "y" or decision != "n":
-        decision =  input("Do you want to add a note to your dish?(y/n)\n")
+        decision = input("Do you want to add a note to your dish?(y/n)\n")
         if decision == "y":
-            note_text = input("What you want to say than?\n")
+            note_text = input("What you want to write in Your note?\n")
             note.add_note(choosen_dish, note_text)
         elif decision == "n":
             return

@@ -5,7 +5,7 @@ import common
 
 def print_results(dishes):
     chosen_dishes = []
-    print("Znaleziono nastepujace potrawy:")
+    print("Recipes I have found:")
     i = 1
     for dish in dishes.keys():
         print(i, dish)
