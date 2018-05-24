@@ -41,7 +41,7 @@ def show_recipes(show_or_find, filename):
         print("\n*{0}*\n".format((filename.strip(".txt")).upper()))
         food_recipes = imports.import_recipes(filename)
         return food_recipes
-    
+
 
 # choosing meal type
 def meal_type_decision(show_or_find):
@@ -58,7 +58,7 @@ def meal_type_decision(show_or_find):
         elif choose == "d":
             return show_recipes(show_or_find, dinner)
         else:
-            print("something went wrong, be sure you typed 'b', 's' or 'd'")
+            print("\nsomething went wrong, be sure you typed 'b', 's' or 'd'\n")
 
 
 # getting dishes by choosen algorithm
@@ -78,7 +78,7 @@ def search_type(file_type):
             final_dishes = algorithms.get_dishes_by_one_component(components, dishes)
             break
         else:
-            print("are you sure you picked 1 or 2? Try again!")
+            print("\nare you sure you picked 1 or 2? Try again!\n")
     return final_dishes
 
 
