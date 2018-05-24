@@ -44,12 +44,8 @@ def print_all_short_recipes():
             print("try again")
 
 
-def print_recipe(dish_name, directory):
-
 # print("\n***",dish_name.upper(),"***\n")
 def print_recipe(dish_name, directory):
-
-    print("\n***", dish_name.upper(), "***\n")
 
     dish_name = directory + dish_name + ".txt"
     with open(dish_name, "r") as file:
