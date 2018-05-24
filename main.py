@@ -3,8 +3,10 @@ import note
 from os import system
 import common
 
+
 # choosing what to show on main menu
 def main_menu_decision(authors):
+    dishes_details_directory = "dishes_details/"
     decision = "0"
     while decision != "4":
         decision = input("what you want to do?\n")
@@ -13,19 +15,18 @@ def main_menu_decision(authors):
             printing.print_results(final_dishes)
             all_dishes = common.numeric_choose_dishes(final_dishes)
             choosen_dish = common.choose_dish(final_dishes, all_dishes)
-            printing.print_recipe(choosen_dish, "dishes_details/")
+            printing.print_recipe(choosen_dish, dishes_details_directory)
             common.deciding_to_add_note(choosen_dish)
             return
         elif decision == "2":
-            printing.print_all_short_recipes()
-            printing.print_results(food_recipies)
-            all_dishes = common.numeric_choose_dishes( food_recipies )
+            food_recipes = printing.print_all_short_recipes()
+            printing.print_results(food_recipes)
+            all_dishes = common.numeric_choose_dishes(food_recipes)
             dish_name = common.choose_dish(all_dishes, all_dishes)
-            printing.print_recipe(choosen_dish, "dishes_details/")
-            
-
+            printing.print_recipe(dish_name, dishes_details_directory)
         elif decision == "3":
             printing.graphics_display(authors)
+
 
 # main function
 def main():

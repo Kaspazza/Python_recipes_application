@@ -1,3 +1,4 @@
+# finds dishes that can be made from your ingredients
 def get_dishes_by_all_components(components, dishes):
 
     # components - dict
@@ -21,10 +22,11 @@ def get_dishes_by_all_components(components, dishes):
 
     return result
 
-
+# finds dishes that contains your ingredients
 def get_dishes_by_one_component(components, dishes):
 
     result = {}
+
     for dish in dishes.keys():
 
         dish_components = 0

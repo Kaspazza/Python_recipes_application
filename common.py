@@ -3,6 +3,7 @@ import algorithms
 import note
 
 
+# choosing number of dish
 def choose_dish(final_dishes, all_dishes):
     dish_name = "niemamnie"
     while dish_name not in final_dishes:
@@ -11,6 +12,7 @@ def choose_dish(final_dishes, all_dishes):
     return dish_name
 
 
+# creating list with established order
 def numeric_choose_dishes(dishes):
     all_dishes = []
     for dish in dishes.keys():
@@ -18,6 +20,7 @@ def numeric_choose_dishes(dishes):
     return all_dishes
 
 
+# choosing note adding
 def deciding_to_add_note(choosen_dish):
     decision = "0"
     while decision != "y" or decision != "n":
@@ -49,7 +52,6 @@ def meal_type_decision():
             print("something went wrong, be sure you typed 'b', 's' or 'd'")
 
 
-
 # getting dishes by choosen algorithm
 def search_type(file_type):
 
@@ -69,7 +71,6 @@ def search_type(file_type):
         else:
             print("are you sure you picked 1 or 2? Try again!")
     return final_dishes
-
 
 
 # picking data for right algorithm

@@ -1,3 +1,4 @@
+# importing recipes as dictionary from file
 def import_recipes(recipes_txt):
     with open(recipes_txt, "r+") as file:
         lines = file.readlines()

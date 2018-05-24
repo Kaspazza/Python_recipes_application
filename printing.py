@@ -3,6 +3,7 @@ import main
 import common
 
 
+#
 def print_results(dishes):
     chosen_dishes = []
     print("Znaleziono nastepujace potrawy:")
@@ -14,7 +15,7 @@ def print_results(dishes):
     return chosen_dishes
 
 
-# imports and prints files like welcome.txt end.txt
+# prints text from files
 def graphics_display(graphic_file):
     with open(graphic_file, "r+") as file:
         lines = file.readlines()
