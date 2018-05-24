@@ -13,6 +13,7 @@ def main_menu_decision(authors):
     decision = "0"
 
     while decision != "4":
+        printing.graphics_display(main_menu)
         decision = input("What you want to do?\n")
         if decision == "1":
             final_dishes = common.meal_type_decision("find")
@@ -46,13 +47,13 @@ def main_menu_decision(authors):
 def main():
     welcome_screen = "graphics/welcome.txt"
     end_screen = "graphics/end.txt"
-    main_menu = "graphics/menu.txt"
+    
     authors = "graphics/authors.txt"
 
     printing.graphics_display(welcome_screen)
     input("Click anything to start")
     system("clear")
-    printing.graphics_display(main_menu)
+    
     main_menu_decision(authors)
     printing.graphics_display(end_screen)
 
