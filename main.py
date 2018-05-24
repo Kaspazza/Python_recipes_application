@@ -11,7 +11,7 @@ def main_menu_decision(authors):
     while decision != "4":
         decision = input("what you want to do?\n")
         if decision == "1":
-            final_dishes = common.meal_type_decision()
+            final_dishes = common.meal_type_decision("find")
             printing.print_results(final_dishes)
             all_dishes = common.numeric_choose_dishes(final_dishes)
             choosen_dish = common.choose_dish(final_dishes, all_dishes)
@@ -19,11 +19,22 @@ def main_menu_decision(authors):
             common.deciding_to_add_note(choosen_dish)
             return
         elif decision == "2":
+<<<<<<< HEAD
             food_recipes = printing.print_all_short_recipes()
             printing.print_results(food_recipes)
             all_dishes = common.numeric_choose_dishes(food_recipes)
             dish_name = common.choose_dish(all_dishes, all_dishes)
             printing.print_recipe(dish_name, dishes_details_directory)
+=======
+            food_recipes = common.meal_type_decision("show")
+            printing.print_results(food_recipes)
+            all_dishes = common.numeric_choose_dishes( food_recipes )
+            dish_name = common.choose_dish(all_dishes, all_dishes)
+            printing.print_recipe(dish_name, "dishes_details/")
+            return
+            
+
+>>>>>>> e63041e4a5f1a37f488a7e67ca5a8673db99bd63
         elif decision == "3":
             printing.graphics_display(authors)
 
