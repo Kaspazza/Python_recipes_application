@@ -28,8 +28,10 @@ def deciding_to_add_note(choosen_dish):
         if decision == "y":
             note_text = input("What you want to say than?\n")
             note.add_note(choosen_dish, note_text)
-        else:
+        elif decision == "n":
             return
+        else:
+            print("You can type only 'y' or 'n'")
 
 
 # show recipes for breakfast, dinner and supper
