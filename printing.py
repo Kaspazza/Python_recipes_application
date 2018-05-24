@@ -1,5 +1,6 @@
 import imports
 import main
+import common
 
 
 def print_results(dishes):
@@ -35,41 +36,29 @@ def print_recipe(dish_name):
 
 
 def print_all_short_recipes():
-    print("\nChoose recipiec for :\n1. Breakfast\n2. Dinner\n3. Su[pper\n")
+    print("\nChoose recipiec for :\n1. Breakfast\n2. Dinner\n3. Supper\n")
     choose = "0"
     while choose != "1" or choose != "2" or choose != "3":
         choose = input("\nWhat kind of meal do you choose?\n")
         if choose == "1":
             print("\n*BREAKFAST*\n")
-            breakfest_recipies = imports.import_recipes("breakfast.txt")
-            print_results(breakfest_recipies)
-            choose = "0"
-            while choose != "1" or choose != "2" or choose != "3" or choose != "4" or choose != "5":
-                choose = input("\nWhich dish?\n")
-                if choose == "1":
-                    choosen_dish = main.choose_dish(main.final_dishes, all_dishes)
-                    printing.print_recipe(choosen_dish)
-                if choose == "2":
-                    pass
-                if choose == "3":
-                    pass
-                if choose == "4":
-                    pass
-                if choose == "5":
-                    pass
+            food_recipies = imports.import_recipes("breakfast.txt")
             break
         elif choose == "2":
             print("\n*DINER*\n")
-            dinner_recipies = imports.import_recipes("dinner.txt")
-            print_results(dinner_recipies)
+            food_recipies = imports.import_recipes("dinner.txt")
             break
         elif choose == "3":
             print("\n*SUPPER*\n")
-            supper_recipies = imports.import_recipes("supper.txt")
-            print_results(supper_recipies)
+            food_recipies = imports.import_recipes("supper.txt")
             break
         else:
-            print("XXX")    
+            print("try again")
+
+    print_results(food_recipies)
+    all_dishes = common.numeric_choose_dishes( food_recipies )
+    dish_name = common.choose_dish(all_dishes, all_dishes)
+    print_recipe(dish_name)   
    
 
 
