@@ -22,27 +22,6 @@ def graphics_display(graphic_file):
     print(lines)
 
 
-def print_all_short_recipes():
-    print("\nChoose recipiec for :\n1. Breakfast\n2. Dinner\n3. Supper\n")
-    choose = "0"
-    while choose != "1" or choose != "2" or choose != "3":
-        choose = input("\nWhat kind of meal do you choose?\n")
-        if choose == "1":
-            print("\n*BREAKFAST*\n")
-            food_recipies = imports.import_recipes("breakfast.txt")
-            return food_recipes
-        elif choose == "2":
-            print("\n*DINER*\n")
-            food_recipies = imports.import_recipes("dinner.txt")
-            return food_recipes
-        elif choose == "3":
-            print("\n*SUPPER*\n")
-            food_recipies = imports.import_recipes("supper.txt")
-            return food_recipes
-        else:
-            print("try again")
-
-
 def print_recipe(dish_name, directory):
 
     print("\n***",dish_name.upper(),"***\n")
