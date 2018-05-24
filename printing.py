@@ -3,7 +3,6 @@ import main
 import common
 
 
-#
 def print_results(dishes):
     chosen_dishes = []
     print("Znaleziono nastepujace potrawy:")
@@ -44,7 +43,6 @@ def print_all_short_recipes():
             print("try again")
 
 
-# print("\n***",dish_name.upper(),"***\n")
 def print_recipe(dish_name, directory):
 
     dish_name = directory + dish_name + ".txt"

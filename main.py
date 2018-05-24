@@ -10,15 +10,18 @@ def main_menu_decision(authors):
     dishes_details_directory = "dishes_details/"
     decision = "0"
     while decision != "4":
-        decision = input("what you want to do?\n")
+        decision = input("What you want to do?\n")
         if decision == "1":
             final_dishes = common.meal_type_decision("find")
-            printing.print_results(final_dishes)
-            all_dishes = common.numeric_choose_dishes(final_dishes)
-            choosen_dish = common.choose_dish(final_dishes, all_dishes)
-            printing.print_recipe(choosen_dish, dishes_details_directory)
-            common.deciding_to_add_note(choosen_dish)
-            return
+            if len(final_dishes) < 1:
+                print("\nA t t e n t i o n  ! ! !\nThere is no such product !!!\n")
+            else:    
+                printing.print_results(final_dishes)
+                all_dishes = common.numeric_choose_dishes(final_dishes)
+                choosen_dish = common.choose_dish(final_dishes, all_dishes)
+                printing.print_recipe(choosen_dish, dishes_details_directory)
+                common.deciding_to_add_note(choosen_dish)
+                return
         elif decision == "2":
             food_recipes = printing.print_all_short_recipes()
             printing.print_results(food_recipes)
