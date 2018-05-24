@@ -2,6 +2,7 @@ import printing
 import note
 from os import system
 import common
+import os.path
 
 # choosing what to show on main menu
 def main_menu_decision(authors):
@@ -17,13 +18,16 @@ def main_menu_decision(authors):
             common.deciding_to_add_note(choosen_dish)
             return
         elif decision == "2":
-            printing.print_all_short_recipes()
-            printing.print_results(food_recipies)
-            all_dishes = common.numeric_choose_dishes( food_recipies )
+            food_recipes = printing.print_all_short_recipes()
+            printing.print_results(food_recipes)
+            all_dishes = common.numeric_choose_dishes(food_recipes)
             dish_name = common.choose_dish(all_dishes, all_dishes)
-            printing.print_recipe(choosen_dish, "dishes_details/")
+            print("\n***",dish_name.upper(),"***\n")
+            printing.print_recipe(dish_name, "dishes_details/")
+            if os.path.isfile("dishes_notes/"+ dish_name + ".txt") == True:
+                print("    N O T E S \n")
+                printing.print_recipe(dish_name, "dishes_notes/")
             
-
         elif decision == "3":
             printing.graphics_display(authors)
 

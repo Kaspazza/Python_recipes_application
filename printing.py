@@ -29,15 +29,15 @@ def print_all_short_recipes():
         choose = input("\nWhat kind of meal do you choose?\n")
         if choose == "1":
             print("\n*BREAKFAST*\n")
-            food_recipies = imports.import_recipes("breakfast.txt")
+            food_recipes = imports.import_recipes("breakfast.txt")
             return food_recipes
         elif choose == "2":
             print("\n*DINER*\n")
-            food_recipies = imports.import_recipes("dinner.txt")
+            food_recipes = imports.import_recipes("dinner.txt")
             return food_recipes
         elif choose == "3":
             print("\n*SUPPER*\n")
-            food_recipies = imports.import_recipes("supper.txt")
+            food_recipes = imports.import_recipes("supper.txt")
             return food_recipes
         else:
             print("try again")
@@ -45,7 +45,7 @@ def print_all_short_recipes():
 
 def print_recipe(dish_name, directory):
 
-    print("\n***",dish_name.upper(),"***\n")
+# print("\n***",dish_name.upper(),"***\n")
 
     dish_name = directory + dish_name + ".txt"
     with open(dish_name, "r") as file:
