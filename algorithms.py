@@ -22,6 +22,7 @@ def get_dishes_by_all_components(components, dishes):
 
     return result
 
+
 # finds dishes that contains your ingredients
 def get_dishes_by_one_component(components, dishes):
 

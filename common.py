@@ -84,7 +84,14 @@ def search_type(file_type):
 
 # picking data for right algorithm
 def pick_components(type):
-    number_of_ingredients = input("How many ingredients you want to use?\n")
+    ingredients_integer = True
+    while ingredients_integer:
+        try:
+            number_of_ingredients = int(input("How many ingredients you want to use?\n"))
+            ingredients_integer = False
+        except ValueError:
+            print("\nYou need to write a number!\n")
+
     if type == "1":
         components = {}
         for ingredients in range(int(number_of_ingredients)):
