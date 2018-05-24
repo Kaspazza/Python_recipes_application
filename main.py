@@ -13,7 +13,7 @@ def main_menu_decision(authors):
             printing.print_results(final_dishes)
             all_dishes = common.numeric_choose_dishes(final_dishes)
             choosen_dish = common.choose_dish(final_dishes, all_dishes)
-            printing.print_recipe(choosen_dish)
+            printing.print_recipe(choosen_dish, "dishes_details/")
             common.deciding_to_add_note(choosen_dish)
             return
         elif decision == "2":
@@ -21,7 +21,8 @@ def main_menu_decision(authors):
             printing.print_results(food_recipies)
             all_dishes = common.numeric_choose_dishes( food_recipies )
             dish_name = common.choose_dish(all_dishes, all_dishes)
-            printing.print_recipe(dish_name)
+            printing.print_recipe(choosen_dish, "dishes_details/")
+            
 
         elif decision == "3":
             printing.graphics_display(authors)
