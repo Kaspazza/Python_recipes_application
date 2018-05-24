@@ -19,22 +19,12 @@ def main_menu_decision(authors):
             common.deciding_to_add_note(choosen_dish)
             return
         elif decision == "2":
-<<<<<<< HEAD
-            food_recipes = printing.print_all_short_recipes()
+            food_recipes = common.meal_type_decision("show")
             printing.print_results(food_recipes)
             all_dishes = common.numeric_choose_dishes(food_recipes)
             dish_name = common.choose_dish(all_dishes, all_dishes)
-            printing.print_recipe(dish_name, dishes_details_directory)
-=======
-            food_recipes = common.meal_type_decision("show")
-            printing.print_results(food_recipes)
-            all_dishes = common.numeric_choose_dishes( food_recipes )
-            dish_name = common.choose_dish(all_dishes, all_dishes)
             printing.print_recipe(dish_name, "dishes_details/")
             return
-            
-
->>>>>>> e63041e4a5f1a37f488a7e67ca5a8673db99bd63
         elif decision == "3":
             printing.graphics_display(authors)
 

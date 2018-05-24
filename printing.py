@@ -25,12 +25,12 @@ def graphics_display(graphic_file):
 
 def print_recipe(dish_name, directory):
 
-    print("\n***",dish_name.upper(),"***\n")
+    print("\n***", dish_name.upper(), "***\n")
 
     dish_name = directory + dish_name + ".txt"
     with open(dish_name, "r") as file:
         lines = file.readlines()
         list_recipe = [item.strip("\n") for item in lines]
-        for  line in list_recipe:
+        for line in list_recipe:
             print ("   ",line)
     print()
